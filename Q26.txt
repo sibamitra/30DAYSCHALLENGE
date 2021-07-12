@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Q26
+{
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a Number : ");
+        int a=sc.nextInt();
+        int b=(int)Math.sqrt(a);
+        if(a==(b*(b+1)))
+        {
+            System.out.println(a+" "+" is a Pronic No.");
+        }
+        else
+        {
+            System.out.println(a+" "+"is not a Pronic No.");
+        }
+    }
+}

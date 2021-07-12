@@ -1,0 +1,62 @@
+public class Q44 {
+    int[] Binary(int a) {
+        int c=7;
+        int b[] = new int[8];
+        while(a>0) {
+            if(a%2==0) {
+                b[c] = 0;
+                c--;
+                a = a/2;
+            }
+            else {
+                b[c] = 1;
+                c--;
+                a = a/2;
+            }
+        }
+        return b;
+    }
+    static void pallindrome(int a[]){
+    int i;
+        int m = 7;
+        int b=0;
+        int c[] = new int[8];
+        for(i=0;i<8;i++) {
+            c[m] = c[i];
+            m--;
+        }
+        System.out.print("Binary:");
+        for(i=0;i<8;i++) {
+            System.out.print(c[i]);
+        }
+        System.out.print("Reversed Binary:");
+        for(i=0;i<8;i++) {
+            System.out.print(c[i]);
+        }
+        for(i=0;i<8;i++) {
+            if(c[i] == a[i]) {
+                b = 1;
+            }
+            else {
+                b=0;
+                break;
+            }
+        }
+        if(b == 1) {
+            System.out.println("It is a Pallindrome");
+        }
+        else {
+            System.out.println("It is not a Pallindrome");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number ");
+        int n = sc.nextInt();
+        Q44 q = new Q44();
+        int b[] = q.Binary(n);
+        pallindrome(b);
+    }
+
+}
+

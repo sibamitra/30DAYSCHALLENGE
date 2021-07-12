@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Q43 {
+        void convert(int n) {
+            System.out.println("Decimal to HexaDecimal,Octal and Binary");
+            String hexa = Integer.toHexString(n);
+            System.out.println("HexaDecimal Value is : " + hexa);
+            String octal = Integer.toOctalString(n);
+            System.out.println("Octal Value is : " + octal);
+            String binary = Integer.toBinaryString(n);
+            System.out.println("Binary Value is : " + binary);
+        }
+        public static void main(String args[]) {
+            Q43 obj = new Q43();
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter Decimal number:");
+            int n=sc.nextInt();
+            obj.convert(n);
+        }
+    }
+
+

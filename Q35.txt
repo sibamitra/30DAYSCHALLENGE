@@ -1,0 +1,12 @@
+public class Q35 {
+     public int fibo(int n) {
+        int a =(int) (1 + Math.sqrt(5)) / 2;
+        return (int)Math.round(Math.pow(a, n) / Math.sqrt(5));
+    }
+    public static void main(String[] args) {
+        int n = 12;
+        Q35 q=new Q35();
+
+        System.out.println( q.fibo(12));
+    }
+}

@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Q39 {
+    public static void main(String args[]) {
+        Q39 p=new Q39();
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+        if(t<=10) {
+            int [][]d=new int[t][2];
+            for(int i=0;i<d.length;i++) {
+                for(int j=0;j<2;j++) {
+                    d[i][j]=sc.nextInt();
+                }
+            }
+            for(int i=0;i<t;i++){
+                p.generate(d[i][0],d[i][1]);
+                System.out.println( " ");
+            }
+        }
+        else return;
+    }
+    void generate(int k,int l) {
+        int []a=new int[k+l];
+        if((l-k)<=100000){
+            for(int i=0;i<a.length;i++) {
+                a[i]='0';
+            }
+            int c=0;
+            int d=0;
+            for(int i=k;i<=l;i++) {
+                a[c]=i;
+                c++;
+            }
+            for(int i=0;i<a.length;i++) {
+                for(int j=2;j<a[i];j++) {
+                    if((a[i]%j)==0)
+                        a[i]='0';
+                }
+            }
+            for(int i=0;i<a.length;i++) {
+                if((a[i]!=1)&&a[i]!='0')
+                    System.out.println(a[i]);
+            }
+        }
+        else return;
+    }
+
+
+
+
+
+
+
+}

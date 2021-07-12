@@ -1,0 +1,9 @@
+public class Q12 {
+    public static void main(String[] args) {
+        int val = -100;
+        // integer
+        System.out.println("Integer: "+val);
+        // binary
+        System.out.println("Binary = " + Integer.toBinaryString(val));
+    }
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Q22 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 1st number:");
+        int a=sc.nextInt();
+        System.out.println("Enter 2nd number:");
+        int b=sc.nextInt();
+        int c=0;
+        while (b > 0) {
+            if ((b & 1) != 0) {
+                c = c + a;
+                a = a << 1;
+                b = b >> 1;
+            }
+            System.out.println("The Multiplication of two numbers are:" + c);
+
+        }
+
+    }
+
+
+
+
+
+    }
